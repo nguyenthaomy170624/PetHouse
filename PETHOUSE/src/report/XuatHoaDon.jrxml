@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="XuatHoaDon" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b03133f0-4ef9-4d93-b9fc-cb129f549afa">
+	<property name="ireport.zoom" value="1.1269722013523682"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#0033FF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#0033FF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#0033FF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#0033FF"/>
+		</box>
+	</style>
+	<field name="maHD" class="java.lang.String"/>
+	<field name="ngayLap" class="java.util.Date"/>
+	<field name="maKH" class="java.lang.String"/>
+	<field name="hoTenKH" class="java.lang.String"/>
+	<field name="hoTenNV" class="java.lang.String"/>
+	<field name="maSP" class="java.lang.String"/>
+	<field name="tenSP" class="java.lang.String"/>
+	<field name="soLuong" class="java.lang.Integer"/>
+	<field name="donGia" class="java.lang.Double"/>
+	<field name="ghiChu" class="java.lang.String"/>
+	<field name="tongTien" class="java.lang.Double"/>
+	<field name="diaChi" class="java.lang.String"/>
+	<field name="soDienThoai" class="java.lang.String"/>
+	<field name="thanhTien" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="81" width="111" height="34" forecolor="#3399FF" uuid="8474a275-a348-4ceb-9525-540092c0ea91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="16" isBold="true" isItalic="false" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PET HOUSE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="0" width="330" height="51" forecolor="#3399FF" uuid="51140089-06c1-479a-8133-dc049c04cfd0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="28" isBold="true" pdfFontName="" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[HÓA ĐƠN BÁN HÀNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="81" width="351" height="19" forecolor="#3399FF" uuid="b39008f8-04b5-454c-9767-ec9acb3df399"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1045 Kha Vạn Cân, Linh Trung, Thủ Đức, Tp.Hcm.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="51" width="200" height="19" forecolor="#3399FF" uuid="880a2e8d-f8d3-476c-b60a-f48c14519149"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Hotline: 0379.889.868]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="13" y="0" width="111" height="81" uuid="2046e211-edeb-4b82-83b5-4cd69036f58c"/>
+				<imageExpression><![CDATA["D:\\HK1_2025\\Java\\09_NguyenThaoMy_8502_PetHouse\\PETHOUSE\\src\\HinhAnh\\logo-pt.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="49" width="93" height="19" forecolor="#3399FF" uuid="d7da30ae-c037-4c96-844c-a144d7603d1e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Khách hàng:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="80" width="84" height="19" forecolor="#3399FF" uuid="529b8131-b827-4a78-8671-f4888fd373e5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Địa chỉ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="50" width="87" height="19" forecolor="#3399FF" uuid="b2cae6f4-4b1d-40d8-b385-c4d119e7c32a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Điện thoại:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="19" width="86" height="19" forecolor="#3399FF" uuid="e07ddc2a-a8b7-41ac-b8a8-ddd775e4673a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Số hóa đơn:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="402" y="19" width="142" height="18" forecolor="#3399FF" uuid="f349d9eb-1afc-41a5-93f4-e03be74a6290"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maHD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="78" width="450" height="21" forecolor="#3399FF" uuid="cc78aa5a-36f1-4dfd-827e-a3ed4364a402"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diaChi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="48" width="208" height="20" forecolor="#3399FF" uuid="1bca9b17-1ffa-44b7-9279-e65daceedeca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hoTenKH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="48" width="142" height="20" forecolor="#3399FF" uuid="a7238a7a-ddc5-43c8-8d9a-dbf430f3a82c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soDienThoai}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="19" width="84" height="19" forecolor="#3399FF" uuid="09601923-a2fa-458f-b91f-b85cc610bfe1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ngày tạo:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="96" y="19" width="100" height="19" forecolor="#3399FF" uuid="a3d4ef2c-1aaf-4882-94b8-15d9f1c8d500"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ngayLap}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="97" y="99" width="447" height="1" forecolor="#3399FF" uuid="a86fedfd-bb2c-4b6c-8cf0-692f991e49a6"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="97" y="67" width="208" height="1" forecolor="#3399FF" uuid="8ac2e117-cbfa-4775-9fa7-4ce4f91c5860"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="403" y="68" width="141" height="1" forecolor="#3399FF" uuid="19edc8f5-4dbb-42ed-81f1-e285f5ed5fc1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="403" y="37" width="141" height="1" forecolor="#3399FF" uuid="05d22c71-e52c-40a4-b119-48b4e03bd46b"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="96" y="37" width="209" height="1" forecolor="#3399FF" uuid="b794ad5e-6176-47dc-af0c-55f0dca467dd"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="28" width="68" height="20" forecolor="#FFFFFF" backcolor="#3399FF" uuid="a181407d-9d33-4a59-841f-ee4999d02fc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Sans" size="8" isBold="true" isItalic="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Mã sản phẩm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="70" y="28" width="126" height="20" forecolor="#FFFFFF" backcolor="#3399FF" uuid="e32053b4-56ee-4429-a999-6bded5078f72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tên sản phẩm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="196" y="28" width="71" height="20" forecolor="#FFFFFF" backcolor="#3399FF" uuid="2fe6ca07-4662-4687-91f4-bdce4a95958a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Số lượng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="267" y="28" width="93" height="20" forecolor="#FFFFFF" backcolor="#3399FF" uuid="456af77c-095a-4ed9-930b-435d20f9bd32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Đơn giá]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="28" width="89" height="20" forecolor="#FFFFFF" backcolor="#3399FF" uuid="9046b3b0-dbbb-4517-9bbf-f932a0a45511"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Thành tiền]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="449" y="28" width="108" height="20" forecolor="#FFFFFF" backcolor="#3399FF" uuid="fe9ffa92-7669-4848-9d25-4034ddae4366"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Ghi chú]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="402" y="0" width="150" height="19" forecolor="#3399FF" uuid="26b2b210-1130-4b25-af63-398fc33d995e"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tongTien} + " VND"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="305" y="0" width="93" height="19" forecolor="#3399FF" uuid="88d26b56-e09b-4132-86ac-5d09ed54e86d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="14" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tổng tiền:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="68" height="20" forecolor="#3399FF" uuid="ee239dc7-683f-4469-9354-2cd91cf093ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maSP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="0" width="126" height="20" forecolor="#3399FF" uuid="4b4918d2-d3a1-442d-86c7-e337818d3eb0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenSP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="0" width="71" height="20" forecolor="#3399FF" uuid="38c78ee4-1c48-4e0d-8f86-f61fa2d7e722"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{soLuong}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="0" width="93" height="20" forecolor="#3399FF" uuid="f78ab495-7ff1-4fda-a6b9-0a5efff9f1d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{donGia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="0" width="89" height="20" forecolor="#3399FF" uuid="f77ab34e-18d0-42b6-a7fe-e395adae0f78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thanhTien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="0" width="108" height="20" forecolor="#3399FF" uuid="307d666b-b51a-432a-93e0-383c965dc6ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ghiChu}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#3399FF" backcolor="#3399FF" uuid="3e78c066-bcc1-4cb0-9435-510d8f538b8e"/>
+			</line>
+			<line>
+				<reportElement x="68" y="0" width="1" height="20" forecolor="#3399FF" backcolor="#3399FF" uuid="6101867a-3c41-45a9-920e-e449e6386735"/>
+				<graphicElement>
+					<pen lineWidth="1.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="194" y="0" width="1" height="21" forecolor="#3399FF" backcolor="#3399FF" uuid="1863231e-7168-4fe8-a909-1fe23bff44a4"/>
+			</line>
+			<line>
+				<reportElement x="265" y="0" width="1" height="20" forecolor="#3399FF" backcolor="#3399FF" uuid="a15f0a2d-f2af-42e4-8551-4ad9c6f640d2"/>
+			</line>
+			<line>
+				<reportElement x="358" y="0" width="1" height="20" forecolor="#3399FF" backcolor="#3399FF" uuid="a31de07e-1c0a-48cd-a71b-24098e910410"/>
+			</line>
+			<line>
+				<reportElement x="447" y="0" width="1" height="21" forecolor="#3399FF" backcolor="#3399FF" uuid="c18d01ed-91b1-4bd8-b20c-2de3c82d1aef"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="20" forecolor="#3399FF" backcolor="#3399FF" uuid="d3623d07-9396-4b7b-b84d-895fba6e2f61"/>
+			</line>
+			<line>
+				<reportElement x="2" y="0" width="555" height="1" forecolor="#0033FF" uuid="227085fa-7805-419f-bde1-4ef02a211514"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="145">
+			<staticText>
+				<reportElement x="377" y="29" width="162" height="19" forecolor="#3399FF" uuid="8b632b52-1bb0-4197-a86d-5782b840b3cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Người bán hàng]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="377" y="100" width="162" height="20" forecolor="#3399FF" uuid="25753b05-1f36-489a-aeb3-2a52b81da6b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hoTenNV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="377" y="48" width="162" height="20" forecolor="#3399FF" uuid="507a22a6-521c-48e9-96d0-30877b6e16c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(Ký, ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="48" width="162" height="20" forecolor="#3399FF" uuid="0a046c21-41b7-482c-a1f1-b867763101af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(Ký, ghi rõ họ tên)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="100" width="162" height="20" forecolor="#3399FF" uuid="b86153f4-e8b4-4cfb-898e-9194e985d8f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hoTenKH}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="29" width="162" height="19" forecolor="#3399FF" uuid="ce2269df-947a-48ff-8607-98836f1d4d6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Times-Roman" pdfEncoding="Cp1258" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Người mua hàng]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="137" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

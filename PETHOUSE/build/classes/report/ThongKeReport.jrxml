@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ThongKeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6507c4b2-430d-419c-ab11-b1b1d26c4b79">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="TableStyle">
+		<box>
+			<pen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="TableHeaderStyle" mode="Opaque" forecolor="#FFFFFF" backcolor="#2196F3" fontName="DejaVu Sans" fontSize="12" isBold="true"/>
+	<style name="TableCellStyle" fontName="DejaVu Sans" fontSize="11"/>
+	<parameter name="TenNguoiXuat" class="java.lang.String"/>
+	<parameter name="NgayXuat" class="java.lang.String"/>
+	<parameter name="ThoiGianThongKe" class="java.lang.String"/>
+	<parameter name="TongDoanhThu" class="java.lang.Double"/>
+	<field name="maHD" class="java.lang.String"/>
+	<field name="ngayLap" class="java.util.Date"/>
+	<field name="tenSanPham" class="java.lang.String"/>
+	<field name="soLuong" class="java.lang.Integer"/>
+	<field name="donGia" class="java.lang.Double"/>
+	<field name="thanhTien" class="java.lang.Double"/>
+	<title>
+		<band height="231">
+			<textField>
+				<reportElement x="0" y="113" width="555" height="40" forecolor="#3399FF" uuid="92d48d69-74e1-46e7-a917-bab11994396b"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BÁO CÁO THỐNG KÊ DOANH THU"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="153" width="555" height="20" uuid="4f39f767-58c7-4577-9a85-7ad54206f6ca"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nhân viên xuất báo cáo: " + $P{TenNguoiXuat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="183" width="555" height="20" uuid="1e4a97c5-105f-4225-a726-9e77516bbc2b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ngày xuất báo cáo: " + $P{NgayXuat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="211" width="555" height="20" uuid="00212b0c-456e-4170-929d-7040a9cd0476"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Thời gian thống kê: " + $P{ThoiGianThongKe}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="4" y="0" width="100" height="95" uuid="f4b654ef-ae6f-40fe-bddd-3be73671cb55"/>
+				<imageExpression><![CDATA["D:\\HK1_2025\\Java\\09_NguyenThaoMy_8502_PetHouse\\PETHOUSE\\src\\HinhAnh\\logo-pt.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="104" y="0" width="451" height="47" forecolor="#3399FF" uuid="bd8350d0-d9b4-4723-a369-d7625400bbc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CỬA HÀNG THÚ CƯNG PET HOUSE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="67" width="451" height="20" forecolor="#3399FF" uuid="62296568-cf03-46d4-ae9d-1846cb7c3beb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[1045 Kha Vạn Cân, Linh Trung, Thủ Đức, Tp.Hcm.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="47" width="451" height="20" forecolor="#3399FF" uuid="367c8645-f184-40f6-a794-3c8c7a618acd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hotline: 0379.889.868]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25">
+			<textField>
+				<reportElement x="0" y="5" width="555" height="20" uuid="c968bc9e-3e21-4b4a-9116-53c71dfece51"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tổng doanh thu: " + new DecimalFormat("#,##0").format($P{TongDoanhThu}) + " VND"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement style="TableHeaderStyle" x="0" y="0" width="90" height="30" uuid="728e3b17-271f-4d97-bc10-17cc6ddd9ddc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mã Hóa Đơn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="TableHeaderStyle" x="90" y="0" width="100" height="30" uuid="f0c466ee-26fd-47c8-b823-11c8507b5e59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ngày Lập]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="TableHeaderStyle" x="190" y="0" width="150" height="30" uuid="5f2ddee4-9b4e-4910-8ae8-6c7222f0d016"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tên Sản Phẩm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="TableHeaderStyle" x="340" y="0" width="60" height="30" uuid="6b1d2cdc-874f-4a09-91ba-82fd9d3b613c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Số Lượng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="TableHeaderStyle" x="400" y="0" width="80" height="30" uuid="a1a7cac0-fca3-4b89-b091-ffcaf0c5d936"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Giá Bán (VND)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="TableHeaderStyle" x="480" y="0" width="75" height="30" uuid="a953af7c-2d5e-4c7e-a879-70bbe2c55b25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Thành Tiền (VND)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<textField>
+				<reportElement style="TableCellStyle" x="0" y="0" width="90" height="30" uuid="3fa4c155-a7c9-4558-aa46-e0fb25b74a5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{maHD}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="TableCellStyle" x="90" y="0" width="100" height="30" uuid="6a424aac-455c-424c-81de-d0cf74473b95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ngayLap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TableCellStyle" x="190" y="0" width="150" height="30" uuid="2f77304c-d164-42c8-bcbc-94364db84bbb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tenSanPham}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TableCellStyle" x="340" y="0" width="60" height="30" uuid="1a324315-abb5-4241-b9c6-27677794bc33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{soLuong}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TableCellStyle" x="400" y="0" width="80" height="30" uuid="a2219b75-28de-4d53-8487-e5f3d427b461"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new DecimalFormat("#,##0").format($F{donGia})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TableCellStyle" x="480" y="0" width="75" height="30" uuid="896364fd-2147-4d6c-992d-65656c4d3ef3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new DecimalFormat("#,##0").format($F{thanhTien})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="300"/>
+	</summary>
+</jasperReport>
